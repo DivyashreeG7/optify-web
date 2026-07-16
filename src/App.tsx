@@ -889,13 +889,13 @@ export default function App() {
                 <h2 className="text-4xl md:text-6xl font-extrabold mb-8 tracking-tighter text-slate-900">Let's build something fast.</h2>
                 <p className="text-lg text-slate-600 mb-8 font-normal">Tell us about your project. We'll get back within one business day with next steps.</p>
                 <div className="space-y-4 mb-8">
-                  <a href="mailto:hello@optify.agency" className="flex items-center gap-4 p-4 bg-white rounded-xl border border-orange-100 hover:border-orange-300 shadow-sm hover:shadow-md transition">
+                  <a href="mailto:optifysupport@gmail.com" className="flex items-center gap-4 p-4 bg-white rounded-xl border border-orange-100 hover:border-orange-300 shadow-sm hover:shadow-md transition">
                     <div className="p-3 bg-orange-50 rounded-lg">
                       <Mail className="text-orange-600" size={24}/>
                     </div>
                     <div>
                         <div className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Email</div>
-                        <div className="font-bold text-lg text-slate-900">hello@optify.agency</div>
+                        <div className="font-bold text-lg text-slate-900">optifysupport@gmail.com</div>
                     </div>
                   </a>
                   <a href="tel:9071911793" className="flex items-center gap-4 p-4 bg-white rounded-xl border border-orange-100 hover:border-orange-300 shadow-sm hover:shadow-md transition">
