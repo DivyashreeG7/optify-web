@@ -911,7 +911,14 @@ export default function App() {
             </div>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="text" placeholder="Name *" className="w-full p-4 rounded-xl border border-orange-100 bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-orange-200 focus:border-orange-400 focus:outline-none font-medium transition" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} required />
+                    <div className="flex flex-col gap-1.5 w-full">
+                        <input type="text" placeholder="Name *" className="w-full p-4 rounded-xl border border-orange-100 bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-orange-200 focus:border-orange-400 focus:outline-none font-medium transition" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} required />
+                        {toast.show && toast.type === 'success' && (
+                          <span className="text-xs text-emerald-600 font-bold pl-1 animate-[fadeIn_0.2s_ease-out]">
+                            Inquiry sent successfully!
+                          </span>
+                        )}
+                    </div>
                     <input type="email" placeholder="Email *" className="w-full p-4 rounded-xl border border-orange-100 bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-orange-200 focus:border-orange-400 focus:outline-none font-medium transition" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} required />
                 </div>
                 <input type="text" placeholder="Company" className="w-full p-4 rounded-xl border border-orange-100 bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-orange-200 focus:border-orange-400 focus:outline-none font-medium transition" value={formData.company} onChange={e => setFormData({...formData, company: e.target.value})} />
