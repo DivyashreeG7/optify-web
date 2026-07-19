@@ -268,7 +268,7 @@ export default function App() {
     }
   };
 
-  const services = ['Web Dev', 'Mobile Apps', 'E-commerce', 'Education', 'Delivery', 'Cloud & DevOps', 'UI/UX Design', 'AI Automation', 'AI Workforce'];
+  const services = ['Web Dev', 'Mobile Apps', 'E-commerce', 'Education', 'Delivery', 'Inventory Management', 'Cloud & DevOps', 'UI/UX Design', 'AI Automation', 'AI Workforce'];
   const approach = [
     { title: 'Discover & define', desc: 'We start by understanding your business, users and goals, then translate them into a sharp, measurable product strategy.' },
     { title: 'Design with intent', desc: 'Every screen is crafted for clarity and speed. Prototypes are tested early so we build the right thing, once.' },
@@ -277,210 +277,320 @@ export default function App() {
   ];
   const works = [
     {
-      name: 'EduApp',
-      desc: 'Interactive LMS & study planner for K-12 students.',
-      category: 'EdTech Platform',
-      color: 'from-violet-600 to-indigo-600',
-      accent: 'indigo',
-      url: 'eduapp.optify.agency',
-      isDark: true,
-      preview: (
-        <div className="w-full h-full bg-slate-900 text-white p-6 md:p-8 font-sans text-left flex flex-col justify-between">
-          <div className="flex justify-between items-center">
-            <span className="text-[10px] font-extrabold tracking-widest text-indigo-400 uppercase bg-indigo-500/10 px-2.5 py-1 rounded">Live Class</span>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-              <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">01:42 Live</span>
-            </div>
-          </div>
-          <div>
-            <div className="text-lg md:text-2xl font-extrabold mb-1 tracking-tight">Advanced Algebra II & Pre-Calculus</div>
-            <div className="text-xs md:text-sm text-slate-400">Instructor: Prof. Sarah Jenkins • Math Department</div>
-          </div>
-          <div className="space-y-3 my-2">
-            <div className="flex justify-between text-xs text-indigo-300 font-semibold">
-              <span>Semester Course Progress</span>
-              <span>82% Completed</span>
-            </div>
-            <div className="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
-              <div className="bg-indigo-500 h-full rounded-full" style={{ width: '82%' }}></div>
-            </div>
-          </div>
-          <div className="flex items-center justify-between mt-2 pt-4 border-t border-slate-800/80">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-xs font-bold text-white">SJ</div>
-              <div className="text-xs text-slate-300 font-medium">24 active students connected</div>
-            </div>
-            <span className="text-xs text-indigo-400 font-semibold hover:underline cursor-pointer">Enter Classroom →</span>
-          </div>
-        </div>
-      )
-    },
-    {
-      name: 'SwiftDelivery',
-      desc: 'Real-time logistics, multi-stop routing & driver app.',
-      category: 'Logistics App',
-      color: 'from-amber-500 to-orange-600',
-      accent: 'orange',
-      url: 'swiftdelivery.optify.agency',
-      isDark: true,
-      preview: (
-        <div className="w-full h-full bg-slate-950 text-white p-6 md:p-8 font-sans text-left flex flex-col justify-between">
-          <div className="flex justify-between items-center">
-            <span className="text-[10px] font-extrabold tracking-widest text-orange-400 uppercase bg-orange-500/10 px-2.5 py-1 rounded">Active Route</span>
-            <span className="text-[11px] bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full font-bold">In Transit</span>
-          </div>
-          <div className="my-4 flex-1 flex flex-col justify-center">
-            <div className="flex items-center gap-4">
-              <div className="flex flex-col items-center">
-                <div className="w-3 h-3 rounded-full bg-emerald-500 shadow-md shadow-emerald-500/30"></div>
-                <div className="w-0.5 h-10 bg-slate-700 my-0.5"></div>
-                <div className="w-3 h-3 rounded-full bg-orange-500 shadow-md shadow-orange-500/30"></div>
-              </div>
-              <div className="text-xs md:text-sm space-y-2.5">
-                <div>
-                  <div className="text-[10px] text-slate-505 uppercase font-bold tracking-wider">Pickup Point</div>
-                  <div className="font-semibold text-slate-300">Distribution Hub Alpha (Bay 14)</div>
-                </div>
-                <div>
-                  <div className="text-[10px] text-slate-550 uppercase font-bold tracking-wider">Destination</div>
-                  <div className="font-semibold text-white">124 Oakwood Ave (Apt 4B), Seattle WA</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="bg-slate-900 p-4 rounded-xl flex justify-between items-center border border-slate-800/50">
-            <div>
-              <div className="text-[9px] text-slate-400 uppercase font-bold tracking-wider">Estimated Arrival</div>
-              <div className="text-sm font-bold text-white">12:45 PM (8 mins remaining)</div>
-            </div>
-            <div className="text-right">
-              <div className="text-[9px] text-slate-400 uppercase font-bold tracking-wider">Distance</div>
-              <div className="text-sm font-bold text-orange-400">1.8 km</div>
-            </div>
-          </div>
-        </div>
-      )
-    },
-    {
-      name: 'ShopFront',
-      desc: 'Premium fashion e-commerce storefront with multi-currency.',
-      category: 'E-commerce Platform',
-      color: 'from-emerald-600 to-teal-600',
-      accent: 'teal',
-      url: 'shopfront.optify.agency',
+      name: 'iSCHOOL',
+      desc: 'Play school network portal showcasing joyful learning, vision, mission, and metrics.',
+      category: 'Play School Network',
+      color: 'from-purple-500 to-pink-500',
+      accent: 'purple',
+      url: 'ischool.optify.agency',
       isDark: false,
       preview: (
-        <div className="w-full h-full bg-white text-slate-900 p-6 md:p-8 font-sans text-left flex flex-col justify-between">
-          <div className="flex justify-between items-center">
-            <span className="text-[10px] font-extrabold tracking-widest text-emerald-600 uppercase bg-emerald-50 px-2.5 py-1 rounded">New Season</span>
-            <span className="text-xs font-bold text-slate-400">ID: SF-9284</span>
+        <div className="w-full h-full bg-slate-50 text-slate-900 p-4 md:p-6 font-sans text-left flex flex-col justify-between overflow-hidden">
+          {/* Top Bar */}
+          <div className="flex justify-between items-center pb-2 border-b border-slate-100">
+            <div className="flex items-center gap-1.5">
+              <span className="w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center text-[10px] text-white">🎓</span>
+              <span className="text-xs font-black tracking-tight text-purple-700 uppercase">iSCHOOL</span>
+            </div>
+            <span className="text-[10px] bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full font-bold">Play School Network</span>
           </div>
-          <div className="space-y-1 my-2">
-            <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Minimalist Winter Collection</div>
-            <div className="text-lg md:text-2xl font-black tracking-tight text-slate-900">Onyx Tailored Wool Overcoat</div>
-            <div className="text-base font-extrabold text-emerald-600">$289.00 USD <span className="text-xs text-slate-400 font-normal line-through ml-2">$350.00</span></div>
-          </div>
-          <div className="grid grid-cols-4 gap-2 my-2 max-w-sm">
-            {['S', 'M', 'L', 'XL'].map((s, idx) => (
-              <div key={s} className={`text-xs py-2 text-center font-bold rounded-lg border cursor-pointer transition ${idx === 1 ? 'bg-slate-900 border-slate-900 text-white shadow-sm' : 'border-slate-200 text-slate-600 bg-slate-50 hover:bg-slate-100'}`}>
-                {s}
+
+          {/* Main Area */}
+          <div className="grid grid-cols-12 gap-3 flex-1 py-3 items-center">
+            {/* Left Column: Badges & Photo Mockup */}
+            <div className="col-span-5 flex flex-col justify-center gap-2">
+              <div className="border border-dashed border-purple-400 bg-white p-2 rounded-xl text-center shadow-sm">
+                <div className="text-base md:text-lg font-black text-purple-700 leading-none">1,710+</div>
+                <div className="text-[9px] text-slate-500 font-semibold">Happy Students</div>
               </div>
-            ))}
+              <div className="border border-dashed border-pink-400 bg-white p-2 rounded-xl text-center shadow-sm">
+                <div className="text-base md:text-lg font-black text-pink-600 leading-none">35+</div>
+                <div className="text-[9px] text-slate-500 font-semibold">Awards Won</div>
+              </div>
+            </div>
+
+            {/* Right Column: Purpose Card */}
+            <div className="col-span-7 space-y-2 flex flex-col justify-center">
+              <div className="bg-white p-2.5 rounded-xl shadow-sm border border-purple-100/50">
+                <div className="flex items-center gap-1.5 mb-0.5">
+                  <span className="text-xs">💜</span>
+                  <span className="text-[10px] font-bold text-purple-800 uppercase">Our Vision</span>
+                </div>
+                <p className="text-[9px] leading-tight text-slate-500 font-medium">
+                  To be the most innovative and accessible play school network, empowering educators and delighting children.
+                </p>
+              </div>
+              <div className="bg-white p-2.5 rounded-xl shadow-sm border border-pink-100/50">
+                <div className="flex items-center gap-1.5 mb-0.5">
+                  <span className="text-xs">💖</span>
+                  <span className="text-[10px] font-bold text-pink-700 uppercase">Our Mission</span>
+                </div>
+                <p className="text-[9px] leading-tight text-slate-500 font-medium">
+                  Unlocking potential with joy to ensure every child thrives in an atmosphere of love, care, and encouragement.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="flex gap-3 mt-2">
-            <button className="flex-1 bg-slate-900 text-white text-center py-3 rounded-xl font-bold text-xs hover:bg-slate-800 transition shadow-sm">
-              Add to Cart
-            </button>
-            <button className="px-4 border border-slate-200 rounded-xl hover:bg-slate-50 transition">
-              ♥
-            </button>
+
+          {/* Bottom Bar */}
+          <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-[10px] text-slate-400">
+            <span>✨ Learning Beyond Books</span>
+            <span className="font-semibold text-purple-700 hover:underline cursor-pointer">Explore Portal →</span>
           </div>
         </div>
       )
     },
     {
-      name: 'HealthSync',
-      desc: 'Real-time smart-ring integrations & clinical reporting.',
-      category: 'Digital Health App',
-      color: 'from-cyan-500 to-blue-600',
-      accent: 'cyan',
-      url: 'healthsync.optify.agency',
-      isDark: true,
+      name: 'EduManage',
+      desc: 'Mobile student portal featuring attendance logs, schedule timings, fee invoicing, and announcements.',
+      category: 'School Portal',
+      color: 'from-blue-500 to-indigo-600',
+      accent: 'blue',
+      url: 'edumanage.optify.agency',
+      isDark: false,
       preview: (
-        <div className="w-full h-full bg-slate-900 text-white p-6 md:p-8 font-sans text-left flex flex-col justify-between">
-          <div className="flex justify-between items-center">
-            <span className="text-[10px] font-extrabold tracking-widest text-cyan-400 uppercase bg-cyan-500/10 px-2.5 py-1 rounded">Wellness Score</span>
-            <span className="text-[11px] text-cyan-400 bg-cyan-500/20 px-3 py-1 rounded-full font-bold">Optimal • 94</span>
-          </div>
-          <div className="flex justify-between items-center my-3">
+        <div className="w-full h-full bg-[#f0f7ff] text-slate-900 font-sans text-left flex flex-col justify-between overflow-hidden">
+          {/* Header */}
+          <div className="p-4 pb-2 flex justify-between items-center bg-white shadow-sm border-b border-blue-50">
             <div>
-              <div className="text-[9px] text-slate-400 uppercase font-bold tracking-wider">Daily Activity Goal</div>
-              <div className="text-2xl md:text-3xl font-black text-white">9,420</div>
-              <div className="text-xs text-cyan-300 font-medium">Steps of 10,000 taken today</div>
+              <h4 className="text-lg font-extrabold text-blue-900">Harvin</h4>
+              <span className="text-xs text-blue-500 font-medium">Class: 1</span>
             </div>
-            <div className="relative w-16 h-16 flex items-center justify-center">
-              <svg className="w-16 h-16 transform -rotate-90">
-                <circle cx="32" cy="32" r="26" stroke="#1e293b" strokeWidth="5" fill="transparent" />
-                <circle cx="32" cy="32" r="26" stroke="#06b6d4" strokeWidth="5" fill="transparent" strokeDasharray="163.3" strokeDashoffset="32.6" />
-              </svg>
-              <span className="absolute text-xs font-bold text-white">80%</span>
+            <div className="w-9 h-9 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-sm">
+              👤
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-3 mt-2 pt-3 border-t border-slate-800/80">
-            <div>
-              <div className="text-[8px] text-slate-500 uppercase font-bold tracking-wider">Resting HR</div>
-              <div className="text-xs md:text-sm font-bold text-white">62 bpm</div>
+
+          {/* Quick Menu Grid */}
+          <div className="p-3 grid grid-cols-2 gap-2.5 overflow-y-auto max-h-[220px]">
+            {/* Fees */}
+            <div className="bg-white p-2.5 rounded-xl flex items-center gap-2.5 border border-slate-100 shadow-sm hover:bg-blue-50/50 transition cursor-pointer">
+              <span className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-sm">💵</span>
+              <span className="text-[11px] font-bold text-blue-900">Fees</span>
             </div>
-            <div>
-              <div className="text-[8px] text-slate-500 uppercase font-bold tracking-wider">Deep Sleep</div>
-              <div className="text-xs md:text-sm font-bold text-white">2h 45m</div>
+            {/* Attendance */}
+            <div className="bg-white p-2.5 rounded-xl flex items-center gap-2.5 border border-slate-100 shadow-sm hover:bg-blue-50/50 transition cursor-pointer">
+              <span className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center text-sm">📅</span>
+              <span className="text-[11px] font-bold text-blue-900">Attendance</span>
             </div>
-            <div>
-              <div className="text-[8px] text-slate-500 uppercase font-bold tracking-wider">Active Cals</div>
-              <div className="text-xs md:text-sm font-bold text-white">410 kcal</div>
+            {/* Timings */}
+            <div className="bg-white p-2.5 rounded-xl flex items-center gap-2.5 border border-slate-100 shadow-sm hover:bg-blue-50/50 transition cursor-pointer relative">
+              <span className="w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center text-sm">⏰</span>
+              <span className="text-[11px] font-bold text-blue-900">Timings</span>
+              <span className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-red-500 border border-white"></span>
+            </div>
+            {/* Leave */}
+            <div className="bg-white p-2.5 rounded-xl flex items-center gap-2.5 border border-slate-100 shadow-sm hover:bg-blue-50/50 transition cursor-pointer">
+              <span className="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center text-sm">📝</span>
+              <span className="text-[11px] font-bold text-blue-900">Leave</span>
+            </div>
+            {/* Queries */}
+            <div className="bg-white p-2.5 rounded-xl flex items-center gap-2.5 border border-slate-100 shadow-sm hover:bg-blue-50/50 transition cursor-pointer">
+              <span className="w-8 h-8 rounded-full bg-cyan-50 flex items-center justify-center text-sm">❓</span>
+              <span className="text-[11px] font-bold text-blue-900">Queries</span>
+            </div>
+            {/* Announcements */}
+            <div className="bg-white p-2.5 rounded-xl flex items-center gap-2.5 border border-slate-100 shadow-sm hover:bg-blue-50/50 transition cursor-pointer">
+              <span className="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center text-sm">📢</span>
+              <span className="text-[11px] font-bold text-blue-900">Announcements</span>
+            </div>
+          </div>
+
+          {/* Announcements Card */}
+          <div className="mx-3 mb-2 bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-[11px] font-bold text-blue-900">Announcements</span>
+              <span className="text-[10px] text-blue-500 font-semibold cursor-pointer">View All</span>
+            </div>
+            <div className="text-center py-2 text-[10px] text-slate-400 italic">
+              No announcements for today
+            </div>
+          </div>
+
+          {/* Bottom Nav Bar */}
+          <div className="bg-white border-t border-slate-100 py-1.5 px-6 flex justify-between items-center text-slate-400 select-none">
+            <div className="flex flex-col items-center cursor-pointer text-blue-600">
+              <span className="text-sm">🏠</span>
+              <span className="text-[8px] font-bold mt-0.5">Dashboard</span>
+            </div>
+            <div className="flex flex-col items-center cursor-pointer hover:text-blue-500">
+              <span className="text-sm">💬</span>
+              <span className="text-[8px] font-bold mt-0.5">Chat</span>
+            </div>
+            <div className="flex flex-col items-center cursor-pointer hover:text-blue-500">
+              <span className="text-sm">👤</span>
+              <span className="text-[8px] font-bold mt-0.5">Profile</span>
             </div>
           </div>
         </div>
       )
     },
     {
-      name: 'FinCore',
-      desc: 'DeFi wallet dashboard with instant fiat conversion.',
-      category: 'Fintech Interface',
-      color: 'from-slate-800 to-slate-950',
-      accent: 'slate',
-      url: 'fincore.optify.agency',
+      name: 'DSK Mart',
+      desc: 'E-commerce and admin order management dashboard featuring customer forms, sheet syncing, and payment gateways.',
+      category: 'Admin Dashboard',
+      color: 'from-slate-800 to-slate-900',
+      accent: 'blue',
+      url: 'admin.dskmart.com',
       isDark: true,
       preview: (
-        <div className="w-full h-full bg-gradient-to-br from-slate-900 to-black text-white p-6 md:p-8 font-sans text-left flex flex-col justify-between">
-          <div className="flex justify-between items-center">
-            <span className="text-[10px] font-mono tracking-widest text-amber-400 uppercase bg-amber-500/10 px-2.5 py-1 rounded">GOLD VIP WALLET</span>
-            <span className="text-xs font-semibold text-slate-500">**** 4920</span>
-          </div>
-          <div className="my-2">
-            <div className="text-[9px] text-slate-400 uppercase font-bold tracking-wider">Total Portfolio Value</div>
-            <div className="text-2xl md:text-3xl font-extrabold tracking-tight text-white">$45,820.40</div>
-          </div>
-          <div className="h-16 flex items-end gap-2 my-2">
-            {[40, 55, 38, 70, 60, 85, 90, 75, 80, 95].map((val, i) => (
-              <div key={i} className="flex-1 bg-amber-500/10 rounded-t-md relative h-full">
-                <div className="absolute bottom-0 left-0 right-0 bg-amber-500 rounded-t-md transition-all duration-700" style={{ height: `${val}%` }}></div>
+        <div className="w-full h-full bg-[#f8fafc] text-slate-800 font-sans text-left flex overflow-hidden">
+          {/* Sidebar */}
+          <div className="w-1/3 bg-[#0f172a] text-slate-400 p-3.5 flex flex-col justify-between border-r border-[#1e293b] select-none">
+            <div className="space-y-4">
+              <div className="text-xs font-bold text-white tracking-tight flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 bg-blue-500 rounded"></span>
+                <span>DSK Admin</span>
               </div>
-            ))}
+              <div className="space-y-1.5 text-[8.5px]">
+                <div className="text-[7.5px] uppercase font-bold tracking-wider text-slate-600 px-1">Main</div>
+                <div className="flex items-center gap-1.5 px-1 py-0.5 hover:text-white cursor-pointer transition">📊 Dashboard</div>
+                <div className="flex items-center gap-1.5 px-1.5 py-1 bg-blue-600/10 text-blue-400 font-bold rounded-lg cursor-pointer transition">➕ Create Order</div>
+                <div className="flex items-center gap-1.5 px-1 py-0.5 hover:text-white cursor-pointer transition">📋 Orders</div>
+                <div className="flex items-center gap-1.5 px-1 py-0.5 hover:text-white cursor-pointer transition">📦 Products</div>
+              </div>
+            </div>
+            <div className="text-[7.5px] border-t border-slate-800/80 pt-2.5 text-slate-600">
+              <span className="text-red-500 font-bold block mb-0.5 hover:underline cursor-pointer">🚪 Logout</span>
+              <span>DSK Admin v1.0</span>
+            </div>
           </div>
-          <div className="flex justify-between items-center text-xs text-slate-400 pt-3 border-t border-slate-800/60">
-            <span className="font-semibold text-emerald-400">+14.2% This Month</span>
-            <span className="text-amber-400 font-mono text-[10px]">BTC / USD Realtime feed</span>
+
+          {/* Main Content Area */}
+          <div className="w-2/3 p-4 flex flex-col justify-between overflow-y-auto bg-[#f8fafc]">
+            <div className="flex justify-between items-center pb-2 border-b border-slate-200/50 mb-2">
+              <span className="text-[10px] font-black text-slate-800 uppercase tracking-tight">Create Order</span>
+              <span className="text-[8px] text-slate-400 font-bold">DSK Admin Portal</span>
+            </div>
+
+            {/* Form Cards Container */}
+            <div className="space-y-2 flex-1 flex flex-col justify-center">
+              {/* Customer Details Card */}
+              <div className="bg-white p-2.5 rounded-xl border border-slate-200/60 shadow-sm">
+                <div className="mb-1.5">
+                  <h5 className="text-[9.5px] font-bold text-slate-900 leading-none">Customer Details</h5>
+                  <span className="text-[7px] text-slate-400 font-medium">Information about the customer</span>
+                </div>
+                <div className="grid grid-cols-2 gap-1.5">
+                  <div className="border border-slate-200 rounded px-1.5 py-0.5 bg-slate-50">
+                    <span className="text-[6.5px] text-slate-400 block font-bold uppercase leading-none">Name *</span>
+                    <span className="text-[8.5px] text-slate-400">Start typing...</span>
+                  </div>
+                  <div className="border border-slate-200 rounded px-1.5 py-0.5 bg-slate-50">
+                    <span className="text-[6.5px] text-slate-400 block font-bold uppercase leading-none">Phone *</span>
+                    <span className="text-[8.5px] text-slate-400">10 digit number</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Delivery & Payment Card */}
+              <div className="bg-white p-2.5 rounded-xl border border-slate-200/60 shadow-sm flex flex-col justify-between">
+                <div>
+                  <h5 className="text-[9.5px] font-bold text-slate-900 mb-1 leading-none">Delivery & Payment</h5>
+                  <div className="flex justify-between items-center my-1.5">
+                    <div className="flex gap-1 text-[7px] font-bold">
+                      <span className="px-1.5 py-0.5 border border-slate-200 rounded bg-slate-50 text-slate-600">Cash</span>
+                      <span className="px-1.5 py-0.5 border border-emerald-500 rounded bg-emerald-500 text-white shadow-sm shadow-emerald-100">UPI</span>
+                      <span className="px-1.5 py-0.5 border border-slate-200 rounded bg-slate-50 text-slate-600">Card</span>
+                    </div>
+                    <div className="text-right">
+                      <span className="text-[6px] text-slate-400 uppercase font-black tracking-wider block">Total Amount</span>
+                      <span className="text-xs font-black text-blue-600">₹0.00</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Action Buttons */}
+                <div className="flex gap-2 border-t border-slate-100 pt-2">
+                  <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white rounded text-[8px] font-bold py-1.5 transition flex items-center justify-center gap-1 shadow-sm shadow-blue-100">
+                    💾 Save Order
+                  </button>
+                  <button className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded text-[8px] font-bold py-1.5 transition">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      name: 'Divine Service',
+      desc: 'Vedic rituals, temple ceremonies, and priest consultation platform with calendar bookings.',
+      category: 'Devotional Platform',
+      color: 'from-[#e0b034] to-[#8b5a2b]',
+      accent: 'amber',
+      url: 'divineservice.in',
+      isDark: false,
+      preview: (
+        <div className="w-full h-full bg-gradient-to-br from-[#fffefb] via-[#fdf9ef] to-[#f5ebcd] text-slate-800 p-4 md:p-6 font-sans text-left flex flex-col justify-between overflow-hidden relative">
+          {/* Top Bar / Header */}
+          <div className="flex justify-between items-center pb-2 border-b border-[#ebdcb3]/60">
+            <div className="flex items-center gap-1.5">
+              <span className="text-sm">🕉️</span>
+              <span className="text-xs font-bold text-[#8b5a2b] font-serif tracking-tight">Divine Service</span>
+            </div>
+            <div className="flex gap-3 text-[9px] font-extrabold text-[#8b5a2b] tracking-wider">
+              <span>HOME</span>
+              <span>SERVICES</span>
+              <span>CONTACT</span>
+            </div>
+          </div>
+
+          {/* Sanskrit Blessings Bar */}
+          <div className="text-center text-[7.5px] font-serif tracking-[0.25em] text-[#a07441] italic py-1.5 border-b border-[#ebdcb3]/30 bg-[#fefbf4]/50 select-none">
+            SHRIRASTHU • SHUBHAMASTHU • AVIGNAMASTHU
+          </div>
+
+          {/* Main Area */}
+          <div className="grid grid-cols-12 gap-4 flex-1 py-4 items-center">
+            {/* Left Content */}
+            <div className="col-span-7 space-y-2">
+              <span className="inline-block px-2.5 py-1 bg-[#fef4db] border border-[#f5dfaa] text-[#8b5a2b] text-[8px] font-extrabold rounded-full tracking-wider uppercase">
+                ✨ Dedicated to Dharma & Devotion
+              </span>
+              <div>
+                <h4 className="text-sm md:text-base font-black text-slate-900 leading-tight font-serif">
+                  Bramhashree Bhogapurapu
+                </h4>
+                <h4 className="text-sm md:text-base font-black text-[#8b5a2b] leading-tight font-serif">
+                  Venkataramana Sharma
+                </h4>
+                <p className="text-[9px] text-[#8b5a2b] font-semibold italic mt-0.5">
+                  (Babu Panthulu Garu)
+                </p>
+              </div>
+              <button className="bg-[#8b5a2b] hover:bg-[#724922] transition text-white px-4 py-2 rounded text-[9px] font-bold tracking-wider uppercase mt-2">
+                Explore Services
+              </button>
+            </div>
+
+            {/* Right Profile Mockup */}
+            <div className="col-span-5 flex flex-col items-center justify-center relative">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-[#e0b034] p-0.5 bg-white shadow-md relative overflow-hidden flex items-center justify-center bg-gradient-to-tr from-[#fbf5e6] to-[#fffefc]">
+                <span className="text-3xl md:text-4xl">🙏</span>
+              </div>
+              <div className="absolute -bottom-1 bg-white border border-[#ebdcb3] text-[#8b5a2b] rounded px-1.5 py-0.5 text-[6.5px] font-bold shadow-sm whitespace-nowrap tracking-wider">
+                ⭐ 30+ Yrs Exp.
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="flex items-center justify-between pt-1.5 border-t border-[#ebdcb3]/60 text-[9px] text-[#8b5a2b] font-medium">
+            <span>✨ Vedic Priesthood Services</span>
+            <span className="text-[8px] font-bold hover:underline cursor-pointer">Book Rituals →</span>
           </div>
         </div>
       )
     }
   ];
   const feedbacks = [
-      { name: 'Jane Doe', role: 'CEO, TechFlow', quote: 'Optify transformed our digital presence. Highly recommend!' },
-      { name: 'John Smith', role: 'CTO, ShopNow', quote: 'Incredible speed and scalability. A truly professional team.' },
-      { name: 'Alex Johnson', role: 'Founder, EdTech', quote: 'They understood our vision perfectly from day one.' }
+      { name: 'Sowmya', role: 'Principal, iSchool', rating: 5, quote: 'Optify designed a beautiful, colorful, and engaging platform that captures our school\'s vision. Parents love the easy navigation, and our student registration metrics have grown tremendously.' },
+      { name: 'Venkataramana', role: 'Priest & Guruji, Divine Service', rating: 5, quote: 'The team created a serene, highly professional site for our devotional services. The booking system runs flawlessly, allowing devotees to schedule services and ceremonies with absolute ease.' },
+      { name: 'Siri', role: 'Head, Friends Study Circle Tuition', rating: 5, quote: 'We needed a reliable hub to communicate announcements and class schedules. Optify built a clean, intuitive portal that keeps our tuition classes perfectly organized and connected.' },
+      { name: 'Koushik', role: 'Head of DSK Mart', rating: 4, quote: 'The admin order management dashboard has streamlined our grocery delivery system. Real-time updates, customer forms, and payment checkouts are exceptionally fast and reliable.' }
   ];
 
   useEffect(() => {
@@ -576,7 +686,7 @@ export default function App() {
               <span>Turn Ideas into Impact</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.05] text-slate-900 mb-6 tracking-tighter">ARCHITECTING THE DIGITAL EDGE.</h1>
-            <p className="text-xl text-slate-500 mb-8 max-w-md leading-relaxed">We design and build high-performance websites, mobile apps, e-commerce, education and delivery platforms, all engineered for speed, scale and results.</p>
+            <p className="text-xl text-slate-500 mb-8 max-w-md leading-relaxed">We design and build high-performance websites, mobile apps, e-commerce, education, delivery, and inventory solutions engineered for performance, reliability, and growth.</p>
             <div className="flex gap-4">
                 <a href="#contact" className="relative overflow-hidden group px-8 py-4 bg-orange-600 text-white rounded-xl font-bold text-lg hover:bg-orange-700 transition shadow-lg shadow-orange-200 inline-block text-center">
                     <span className="absolute inset-y-0 -left-[100%] w-1/2 block bg-gradient-to-r from-transparent via-white/35 to-transparent -skew-x-12 transition-all duration-700 ease-out group-hover:left-[150%]" />
@@ -842,7 +952,7 @@ export default function App() {
                         {/* Rating stars */}
                         <div className="flex gap-1 text-amber-400 mb-4">
                           {[...Array(5)].map((_, idx) => (
-                            <svg key={idx} className="w-4 h-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <svg key={idx} className={`w-4 h-4 ${idx < (f.rating || 5) ? 'fill-current text-amber-400' : 'text-slate-200 fill-current'}`} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                           ))}
@@ -872,7 +982,7 @@ export default function App() {
                 <p className="text-lg text-slate-500">From fast-moving startups to established enterprises, teams choose Optify to build software that performs.</p>
             </div>
             <div className="grid grid-cols-2 gap-6">
-                {[ {n: '120+', l: 'PRODUCTS SHIPPED'}, {n: '40+', l: 'HAPPY CLIENTS'}, {n: '99.9%', l: 'UPTIME DELIVERED'}, {n: '4.9/5', l: 'CLIENT RATING'} ].map(s => (
+                {[ {n: '10+', l: 'PRODUCTS SHIPPED'}, {n: '10+', l: 'HAPPY CLIENTS'}, {n: '99.9%', l: 'UPTIME DELIVERED'}, {n: '4.9/5', l: 'CLIENT RATING'} ].map(s => (
                     <div key={s.l} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
                         <div className="text-3xl md:text-5xl font-extrabold text-orange-600 mb-2 tracking-tight">{s.n}</div>
                         <div className="text-xs font-bold text-slate-400 tracking-widest">{s.l}</div>
